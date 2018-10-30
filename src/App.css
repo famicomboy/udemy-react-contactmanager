@@ -1,32 +1,96 @@
-.App {
-  text-align: center;
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navigation */
+.nav-link {
+  margin-right: 0.5em;
+}
+
+.nav-link .fas {
+  margin-right: 0.5em;
   color: white;
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav-link:hover .fas {
+  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Contacts List Cards */
+.contact-card .list-name {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.contact-card .list-name > * {
+  flex: 1 1 100%;
+  margin-left: 1em;
+}
+.contact-card .list-name > *:first-child {
+  margin-left: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-card .fas {
+  font-size: 28px;
+}
+.contact-card .cust-name {
+  flex: 0 0 auto;
+}
+
+.contact-card .details-link {
+  margin-top: -0.2em;
+}
+
+.contact-card .edit-link .fas {
+  font-size: 22px;
+}
+.contact-card .details-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-card .edit-link,
+.contact-card .delete-link {
+  flex: 0 0 30px;
+}
+
+.contact-card .fa-sort-down {
+  cursor: pointer;
+}
+
+.contact-card .fa-times {
+  cursor: pointer;
+  float: right;
+  color: red;
+}
+
+/* Card details */
+.list-group {
+  display: none;
+  opacity: 0;
+}
+
+.list-group.show-info {
+  display: block;
+  opacity: 1;
+
+  transition: 0.22s opacity ease-out;
+
+  margin-top: 0.8em;
 }
